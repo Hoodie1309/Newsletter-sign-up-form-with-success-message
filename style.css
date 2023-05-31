@@ -1,0 +1,244 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+	font-family: 'Roboto-Regular';
+	src: url('/assets/fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Roboto-Bold';
+	src: url('/assets/fonts/Roboto-Bold.ttf');
+}
+
+html {
+	font-family: 'Roboto-Regular', sans-serif;
+	font-size: 16px;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	background-color: #333;
+	color: hsl(234, 29%, 20%);
+}
+
+.newsletter-box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 950px;
+	min-height: 600px;
+	background-color: hsl(0, 0%, 100%);
+	border-radius: 30px;
+}
+
+.newsletter {
+	padding: 80px 0px 80px 70px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	width: 50%;
+	height: 600px;
+}
+
+.newsletter h1 {
+	margin-bottom: 25px;
+	font-family: 'Roboto-Bold', sans-serif;
+	font-size: 55px;
+}
+
+.newsletter .benefits .benefits-ul {
+	list-style: none;
+}
+
+.newsletter .benefits .benefits-ul li {
+	margin: 20px 0;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.newsletter .benefits .benefits-ul li img {
+	margin-right: 15px;
+	width: 20px;
+}
+
+.email {
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 100%;
+}
+
+.error-box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.error-box label,
+.error-box .error {
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.error-box .error {
+	color: hsl(4, 100%, 67%);
+	visibility: hidden;
+}
+
+.error-box .error-mgs {
+	visibility: visible;
+}
+
+.email input,
+.email button {
+	width: 100%;
+	height: 50px;
+	outline: none;
+	border-radius: 7px;
+}
+
+.email input {
+	margin: 10px 0 20px 0;
+	padding: 0 20px;
+	border: 1px solid hsl(231, 7%, 60%);
+}
+
+.error-input::-webkit-input-placeholder {
+	color: hsl(4, 100%, 67%);
+}
+
+.email .invalid {
+	border: 1px solid hsl(4, 100%, 67%);
+	background-color: hsla(4, 100%, 67%, 0.24);
+}
+
+.email button {
+	border: none;
+	font-weight: bold;
+	font-size: 15px;
+	background-color: hsl(234, 29%, 20%);
+	color: hsl(0, 0%, 100%);
+	cursor: pointer;
+}
+
+.img {
+	margin: 15px -15px;
+	width: 50%;
+	min-height: 600px;
+	background-image: url('/assets/images/illustration-sign-up-desktop.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+/* MODAL */
+
+.modal {
+	padding: 40px;
+	display: none;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-start;
+	width: 450px;
+	min-height: 450px;
+	background-color: hsl(0, 0%, 100%);
+	border-radius: 30px;
+}
+
+.modal h2 {
+	font-family: 'Roboto-Bold', sans-serif;
+	font-size: 55px;
+}
+
+.modal p span {
+	font-family: 'Roboto-Bold', sans-serif;
+}
+
+.modal .close-modal {
+	width: 100%;
+	height: 50px;
+	outline: none;
+	border: none;
+	border-radius: 7px;
+	font-weight: bold;
+	font-size: 15px;
+	background-color: hsl(234, 29%, 20%);
+	color: hsl(0, 0%, 100%);
+	cursor: pointer;
+}
+
+/* MOBILE!!!!! */
+
+@media (min-width: 375px) {
+	.newsletter-box {
+		flex-direction: column;
+		width: 100%;
+		min-height: 100vh;
+		border-radius: 0;
+	}
+
+	.newsletter {
+		order: 1;
+		padding: 20px;
+		width: 100%;
+		height: 50%;
+	}
+
+	.img {
+		width: 100%;
+	}
+
+	.img .background {
+		background-image: url('/assets/images/illustration-sign-up-mobile.svg');
+		background-size: cover;
+		background-position: center;
+		width: 100%;
+	}
+
+	.modal {
+		padding: 150px 40px;
+		width: 100%;
+		min-height: 100vh;
+		border-radius: 0;
+	}
+}
+
+@media (min-width: 1440px) {
+	.newsletter-box {
+		flex-direction: row;
+		width: 950px;
+		min-height: 600px;
+		border-radius: 30px;
+	}
+
+	.newsletter {
+		order: 0;
+		padding: 80px 0px 80px 70px;
+		width: 50%;
+		height: 600px;
+	}
+
+	.img {
+		padding: 20px 0 20px 50px;
+		width: 50%;
+	}
+
+	.modal {
+		padding: 40px;
+		width: 450px;
+		min-height: 450px;
+		border-radius: 30px;
+	}
+}
